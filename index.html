@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Boracay Journey — Exploring the World</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<style>
+		body{font-family:'Poppins',system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f1f2f6;color:#1b1f23}
+		.fw-black{font-weight:900}
+		.tracking-wide{letter-spacing:.15em}
+
+		.hero-slide{
+			height:82vh;
+			background-size:cover;
+			background-position:center;
+			background-repeat:no-repeat;
+			image-rendering:auto;
+			-webkit-backface-visibility:hidden;
+			backface-visibility:hidden;
+			transform:translateZ(0);
+		}
+		.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35) 30%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.4));}
+		.text-shadow{text-shadow:0 6px 24px rgba(0,0,0,.45)}
+
+		.bg-teal{background:#cfeee8}
+		.btn-primary{background:#0ea5e9;border-color:#0ea5e9}
+		.btn-primary:hover{background:#0284c7;border-color:#0284c7}
+
+		.card-title{font-weight:800}
+
+		header.navbar{
+			backdrop-filter:saturate(160%) blur(6px);
+			transition:all 0.3s ease;
+		}
+		header.navbar.scrolled{
+			background:rgba(0,0,0,0.85)!important;
+			backdrop-filter:saturate(180%) blur(12px);
+		}
+
+		.nav-custom{
+			color:rgba(255,255,255,0.9)!important;
+			font-weight:600;
+			font-size:0.9rem;
+			padding:0.5rem 1rem!important;
+			margin:0 0.25rem;
+			border-radius:25px;
+			transition:all 0.3s ease;
+			position:relative;
+			text-transform:none;
+			letter-spacing:0.5px;
+		}
+		.nav-custom:hover{
+			color:#fff!important;
+			background:rgba(255,255,255,0.15);
+			transform:translateY(-2px);
+		}
+		.nav-custom:focus{
+			color:#fff!important;
+		}
+		.nav-custom.active{
+			background:rgba(14,165,233,0.3);
+			color:#fff!important;
+			border:1px solid rgba(255,255,255,0.3);
+		}
+		.nav-icon{
+			font-size:1rem;
+			margin-right:0.5rem;
+			display:inline-block;
+			transition:transform 0.3s ease;
+		}
+		.nav-custom:hover .nav-icon{
+			transform:scale(1.2) rotate(5deg);
+		}
+		.navbar-brand{
+			font-size:1.5rem!important;
+			font-weight:800!important;
+			letter-spacing:1px;
+			transition:all 0.3s ease;
+		}
+		.navbar-brand:hover{
+			transform:scale(1.05);
+		}
+
+		html{
+			scroll-behavior:smooth;
+		}
+
+		section{
+			scroll-margin-top:80px;
+		}
+	</style>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<!-- Home Page-->
+<body>
+	<header class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="#home">Boracay</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<nav id="nav" class="collapse navbar-collapse">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link nav-custom" href="#home">Home</a></li>
+					<li class="nav-item"><a class="nav-link nav-custom" href="#explore">About</a></li>
+					<li class="nav-item"><a class="nav-link nav-custom" href="#highlights">Highlights</a></li>
+					<li class="nav-item"><a class="nav-link nav-custom" href="#categories">Categories</a></li>
+					<li class="nav-item"><a class="nav-link nav-custom" href="#gallery">Gallery</a></li>
+					<li class="nav-item"><a class="nav-link nav-custom" href="#cultures">Cultures</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="home" class="position-relative">
+		<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active hero-slide" style="background-image:url('bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+			</div>
+		</div>
+		<div class="hero-overlay d-flex align-items-center justify-content-center text-center">
+			<div class="container">
+				<p class="display-6 fw-bolder text-shadow text-uppercase tracking-wide text-white-50 mb-0">Journey</p>
+				<h1 class="display-2 fw-black lh-1 text-white text-shadow">Exploring Boracay</h1>
+				<p class="lead text-white-100 mb-4">Discover paradise in the Philippines</p>
+				<a href="#explore" class="btn btn-primary btn-lg rounded-pill shadow">Start Exploring</a>
+			</div>
+		</div>
+	</section>
+<!-- About Page-->
+	<section id="explore" class="py-5 bg-white">
+		<div class="container">
+			<div class="row g-4 align-items-center">
+				<div class="col-lg-6">
+					<h4 class="fw-black text-uppercase">About Boracay</h4>
+					<p class="text-secondary">Boracay is an island in the Philippines located about 315 kilometers south of Manila and 2 kilometers off the northwest tip of Panay Island in the Western Visayas region. It is composed of the barangays Manoc-Manoc, Balabag, and Yapak, which belong to the municipality of Malay, Aklan. The island is managed by the Philippine Tourism Authority in coordination with the Provincial Government of Aklan. Originally home to the Ati tribe, Boracay is part of Aklan Province, which became an independent province on April 25, 1956. In 1990, it was recognized by the BMW Tropical Beach Handbook as one of the best beaches in the world, and in 1996, it was named the world’s number one tropical beach by the British publication TV Quick.</p>
+					<p class="text-secondary">Decades ago, Boracay was a secluded island known only to a few, until tourism began to develop in the 1970s. It is said that a foreign movie crew accidentally “discovered” the island, while others credit German traveler Jens Peters, whose book’s rave reviews drew attention to its beauty. During the 1980s, Boracay became popular among backpackers and gradually transformed into a cosmopolitan destination. Today, it stands as one of the major tourist attractions in the Philippines, known worldwide for its powdery white sand beaches, vibrant culture, and lively tourism scene.</p>
+					<div class="d-flex align-items-center mt-4">
+						<img src="bg.jpg" alt="signature" class="rounded-circle me-3" width="56" height="56">
+						<div>
+							<div class="fw-bold">Founder</div>
+							<small class="text-secondary">Boracay was originally inhabited by the Panay Bukidnon and Ati people</small>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="position-relative">
+						<img class="img-fluid rounded shadow" src="aboutpic.jpg" alt="Boracay lagoon">
+						<img class="img-fluid rounded shadow position-absolute end-0 bottom-0 translate-middle-y" style="max-width:45%;" src="aboutpic2.jpg" alt="Beach cove">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Highlights Page-->
+	<section id="highlights" class="py-5 bg-light">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-lg-7">
+					<img class="img-fluid rounded-4 shadow" src="whitebeach.jpg" alt="Aerial boats">
+				</div>
+				<div class="col-lg-5">
+					<div class="p-4 p-lg-5 bg-teal rounded-4 h-100 d-flex flex-column justify-content-center shadow-sm">
+						<blockquote class="mb-3 h5">Walk along the shores of White Beach and let the sea teach you calm, the sun remind you of warmth, and the horizon show you how far your spirit can go. The journey is not just to reach a destination, but to discover yourself in every grain of sand and every setting sun.</blockquote>
+						<small class="text-muted">In Boracay, the journey ends where the sea meets serenity.</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="categories" class="py-5 bg-white">
+		<div class="container">
+			<div class="row text-center mb-4">
+				<div class="col">
+					<h3 class="text-uppercase fw-black">What to discover</h3>
+					<p class="text-secondary">Curated picks around Boracay and nearby Aklan.</p>
+				</div>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="city.jpg" class="card-img-top" alt="City">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">City</h5>
+							<p class="card-text">Boracay invites you to explore warmth, beauty, and adventure beyond compare — a tropical paradise where crystal-clear waters meet powdery white sands, and every sunset paints a new story in the heart of the Philippines.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="boraisland.webp" class="card-img-top" alt="Country">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">Country</h5>
+							<p class="card-text">The Philippines invites you to explore warmth, beauty, and diversity beyond compare — a paradise of over 7,000 islands where vibrant culture meets breathtaking natural wonders, from ancient traditions to modern adventures.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="hotel.jpg" class="card-img-top" alt="Park">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">Hotel</h5>
+							<p class="card-text">Shangri-La’s Boracay Resort and Spa welcomes you to a world of luxury and peace — where lush greenery meets the blue sea, and elegant villas, private beaches, and gentle ocean breezes create the perfect island getaway.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="mall.jpg" class="card-img-top" alt="Mall">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">Mall</h5>
+							<p class="card-text">D’Mall Boracay invites you to wander through its lively lanes filled with local charm — a vibrant mix of cafés, boutiques, and beachside treasures where island culture meets modern leisure, capturing the true spirit of Boracay’s tropical lifestyle.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="mountain.jpg" class="card-img-top" alt="Mountain">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">Mountain</h5>
+							<p class="card-text">Mount Luho invites you to rise above the island and witness Boracay from a breathtaking new perspective — where gentle breezes meet panoramic views, and the beauty of land and sea unfolds in perfect harmony beneath the endless sky.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card h-100 shadow-sm">
+						<img src="whitebeach2.jpg" class="card-img-top" alt="Tourist spot">
+						<div class="card-body">
+							<h5 class="card-title text-uppercase">Tourist spot</h5>
+							<p class="card-text">White Beach welcomes you with its powdery white sands and crystal-clear waters — a perfect blend of peace and tropical charm, where golden sunsets, gentle waves, and island rhythms create the ultimate paradise escape.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery" class="py-5 bg-light">
+		<div class="container">
+			<div class="row text-center mb-5">
+				<div class="col"><h3 class="text-uppercase fw-black">Island gallery</h3></div>
+			</div>
+			<div class="row g-4">
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary1.jpg" alt="Coast"></div>
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary2.jpg" alt="Waves"></div>
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary3.jpg" alt="Sailing"></div>
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary4.jpg" alt="Lanterns"></div>
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary5.jpg" alt="Lanterns"></div>
+				<div class="col-6 col-lg-4 mb-3 mb-lg-0"><img class="img-fluid rounded-3 shadow-sm w-100" src="galary6.jpg" alt="Lanterns"></div>
+			</div>
+		</div>
+	</section>
+<!-- Cultures Page-->
+	<section id="cultures" class="py-5 bg-white">
+		<div class="container">
+			<div class="row text-center mb-5">
+				<div class="col">
+					<h3 class="text-uppercase fw-black mb-3">Local Cultures & Traditions</h3>
+					<p class="text-secondary lead">Immerse yourself in the rich cultural heritage of Boracay and Aklan</p>
+				</div>
+			</div>
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="festival.jpg" class="card-img-top" alt="Ati-Atihan Festival" style="height: 200px; object-fit: cover;">
+						<div class="card-body p-4">
+							<h5 class="card-title fw-bold text-uppercase">Ati-Atihan Festival</h5>
+							<p class="card-text text-secondary">Experience the vibrant Ati-Atihan Festival in Kalibo, a colorful celebration of dance, music, and Filipino culture held every January.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="weaving.jpg" class="card-img-top" alt="Piña Weaving" style="height: 200px; object-fit: cover;">
+						<div class="card-body p-4">
+							<h5 class="card-title fw-bold text-uppercase">Piña Weaving</h5>
+							<p class="card-text text-secondary">Piña Weaving is a traditional Filipino craft that turns pineapple fibers into delicate, handwoven fabrics. In Boracay and nearby Aklan, it represents creativity and cultural pride — showcasing the artistry, patience, and heritage passed down through generations</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="localfood.jpg" class="card-img-top" alt="Local Cuisine" style="height: 200px; object-fit: cover;">
+						<div class="card-body p-4">
+							<h5 class="card-title fw-bold text-uppercase">Local Cuisine</h5>
+							<p class="card-text text-secondary">Savor the taste of Boracay’s island flavors — from fresh seafood, oysters, and mussels to inasal, chori burger, calamansi muffins, and coco mama the famous dessert in the island — all reflecting the island’s rich culture and warm hospitality.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="contact" class="py-5 bg-dark text-light">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-lg-12 text-center">
+					<h4 class="fw-black">Plan your Boracay trip</h4>
+					<p class="text-white-50">This Website helps you to know and learn more about Boracay and its culture.</p>
+				</div>
+			</div>
+			<hr class="border-secondary my-4">
+			<div class="d-flex justify-content-between small text-white-50">
+				<span>© 2025 Journeo Boracay</span>
+				<a href="#home" class="link-light">Back to top ↑</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Navbar scroll effect
+		window.addEventListener('scroll', function() {
+			const navbar = document.querySelector('header.navbar');
+			if (window.scrollY > 50) {
+				navbar.classList.add('scrolled');
+			} else {
+				navbar.classList.remove('scrolled');
+			}
+		});
+
+		// Active nav link highlighting
+		document.querySelectorAll('.nav-custom').forEach(link => {
+			link.addEventListener('click', function() {
+				document.querySelectorAll('.nav-custom').forEach(l => l.classList.remove('active'));
+				this.classList.add('active');
+			});
+		});
+	</script>
+</body>
+</html>
+
+
